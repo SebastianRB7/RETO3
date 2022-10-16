@@ -29,6 +29,7 @@ public class ScoreController {
     @PutMapping("/update")
     public Score update (@RequestBody Score score){ return scoreService.update(score); }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public boolean delete (@PathVariable("id") int carId){ return scoreService.delete(carId); }
 }

@@ -29,6 +29,7 @@ public class MessageController {
     @PutMapping("/update")
     public Message update (@RequestBody Message message){ return messageService.update(message); }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public boolean delete (@PathVariable("id") int carId){ return messageService.delete(carId); }
 }

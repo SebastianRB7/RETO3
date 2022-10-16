@@ -29,6 +29,7 @@ public class ReservationController {
     @PutMapping("/update")
     public Reservation update (@RequestBody Reservation reservation){ return reservationService.update(reservation); }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public boolean delete (@PathVariable("id") int carId){ return reservationService.delete(carId); }
 }
