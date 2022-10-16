@@ -33,6 +33,7 @@ public class CategoryController {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Category update (@RequestBody Category category) { return categoryService.update(category); }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

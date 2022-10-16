@@ -27,6 +27,7 @@ public class ReservationController {
     public Reservation save (@RequestBody Reservation reservation){ return reservationService.save(reservation); }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Reservation update (@RequestBody Reservation reservation){ return reservationService.update(reservation); }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
